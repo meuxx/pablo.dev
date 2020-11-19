@@ -25,14 +25,15 @@ const Header: React.FC = () => {
   return (
     <header
       className={
-        'flex flex-col items-end justify-between bg-texture bg-accentbg bg-repeat bg-fixed text-accentfg h-full text-right fixed top-0 left-0 px-8 py-16 w-80 ' +
-        'lg:relative lg:min-h-screen lg:w-full lg:text-center md:py-8'
+        'flex flex-col items-end justify-between bg-texture bg-accentbg bg-repeat text-accentfg h-full px-8 py-16 ' +
+        'fixed top-0 left-0 w-80 text-right ' +
+        'lg:relative lg:min-h-screen lg:w-full lg:text-center'
       }
     >
       <div className="flex-grow flex-shrink-0 w-full leading-10">
         <Avatar />
 
-        <h1 className="font-bold text-xl lg:text-3xl leading-8 lg:leading-loose md:text-2xl">
+        <h1 className="font-bold text-xl lg:text-3xl leading-8 lg:leading-loose">
           <strong className="text-fgbold">{data.site.author}</strong>
           <br />{' '}
           <a
