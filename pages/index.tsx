@@ -10,6 +10,7 @@ import Experience from '../components/Experience'
 import data from '../content/data.json'
 
 const { site, skills, experience } = data
+const siteUrl = 'https://next.pablo.page'
 
 declare module 'react' {
   interface ScriptHTMLAttributes<T> extends HTMLAttributes<T> {
@@ -37,13 +38,13 @@ const Home: React.FC = () => (
       canonical={site.siteUrl}
       openGraph={{
         type: 'website',
-        url: site.siteUrl,
+        url: siteUrl,
         title: site.title,
         site_name: site.author,
         description: site.description,
         images: [
           {
-            url: `${site.siteUrl}/img/open_graph.jpg`,
+            url: `${siteUrl}/img/open_graph.jpg`,
           },
         ],
       }}
@@ -53,7 +54,7 @@ const Home: React.FC = () => (
       additionalMetaTags={[
         {
           property: 'image',
-          content: `${site.siteUrl}/img/open_graph.jpg`,
+          content: `${siteUrl}/img/open_graph.jpg`,
         },
       ]}
     />
