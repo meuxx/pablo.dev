@@ -1,3 +1,4 @@
+import { AppProps } from 'next/app'
 import '../styles/globals.css'
 
 import { library, config } from '@fortawesome/fontawesome-svg-core'
@@ -7,8 +8,7 @@ import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
 config.autoAddCss = false
 library.add(faGithub, faLinkedin, faEnvelope)
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
-}
+// eslint-disable-next-line react/jsx-props-no-spreading
+const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => <Component {...pageProps} />
 
 export default MyApp
