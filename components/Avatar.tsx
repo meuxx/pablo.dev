@@ -7,8 +7,8 @@ const Avatar: React.FC = () => (
       className="rounded-full"
       src="/img/avatar.jpg"
       alt="Picture of the author"
-      loading="lazy"
-      // layout="fixed"
+      // loading="lazy"
+      layout="fixed"
       width={128}
       height={128}
       priority
