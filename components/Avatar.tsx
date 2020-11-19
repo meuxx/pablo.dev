@@ -7,7 +7,7 @@ const Avatar: React.FC = () => (
       src="/img/avatar.jpg"
       alt="Picture of the author"
       loading="lazy"
-      layout="responsive"
+      layout="intrinsic"
       width={128}
       height={128}
     />
