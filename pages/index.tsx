@@ -23,15 +23,6 @@ const Home: React.FC = () => (
   <Layout>
     <Head>
       <title>{site.title}</title>
-      <link rel="shortcut icon" href="/favicon.png" />
-      <script
-        key="gatsby-plugin-fathom"
-        src="https://haddock.pablo.dev/script.js"
-        included-domains="pablo.dev"
-        site="XMVFXWIR"
-        defer
-      />
-      ,
     </Head>
     <NextSeo
       description={site.description}
