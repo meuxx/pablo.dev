@@ -29,10 +29,10 @@ const Header: React.FC = () => {
         'lg:relative lg:min-h-screen lg:w-full lg:text-center md:py-8'
       }
     >
-      <div className="flex-grow flex-shrink-0 w-full">
+      <div className="flex-grow flex-shrink-0 w-full leading-10">
         <Avatar />
 
-        <h1 className="font-bold text-xl lg:text-3xl lg:leading-loose md:text-2xl">
+        <h1 className="font-bold text-xl lg:text-3xl leading-8 lg:leading-loose md:text-2xl">
           <strong className="text-fgbold">{data.site.author}</strong>
           <br />{' '}
           <a

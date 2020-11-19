@@ -27,7 +27,7 @@
   }
 
   .sidebar-link {
-    @apply transition-colors border-b-2 border-dotted hover:text-fgbold hover:border-transparent;
+    @apply transition-colors border-b border-dotted hover:text-fgbold hover:border-transparent;
   }
 
   .sidebar-icon {
