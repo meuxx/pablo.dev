@@ -1,9 +1,9 @@
 import React from 'react'
-import Header from './Header'
+import Sidebar from './Sidebar'
 
 const Layout: React.FC = ({ children }) => (
   <>
-    <Header />
+    <Sidebar />
     <div className="ml-80 lg:mx-0">{children}</div>
   </>
 )

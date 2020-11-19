@@ -2,7 +2,7 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import useFathomGoal from './hooks/useFathomGoal'
 
-const Footer: React.FC = () => {
+const SidebarFooter: React.FC = () => {
   const handleMailGoal = useFathomGoal('NMFGPZ35')
   const handleGitHubGoal = useFathomGoal('TUDCIJWD')
   const handleLinkedInGoal = useFathomGoal('VN1YOMWA')
@@ -57,4 +57,4 @@ const Footer: React.FC = () => {
   )
 }
 
-export default Footer
+export default SidebarFooter
