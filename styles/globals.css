@@ -1,16 +1,58 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+/*@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap');*/
+@import '~@fortawesome/fontawesome-svg-core/styles.css';
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-* {
-  box-sizing: border-box;
+@layer base {
+  @font-face {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(/fonts/SourceSansPro-Regular.ttf) format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(/fonts/SourceSansPro-Bold.ttf) format('truetype');
+  }
+
+  body {
+    @apply font-sans leading-6 bg-bg text-fg;
+  }
+
+  .sidebar-link {
+    @apply transition-colors border-b-2 border-dotted hover:text-fgbold hover:border-transparent;
+  }
+
+  .sidebar-icon {
+    @apply inline-block;
+  }
+
+  .sidebar-icon-link {
+    @apply transition-colors text-2xl text-accentfglight relative hover:text-fgbold;
+  }
+
+  .section > p {
+    @apply text-fglight mb-8;
+  }
+
+  .section > p strong,
+  .section-header h1,
+  .section-header h2 {
+    @apply text-fgbold font-bold;
+  }
+
+  .section-header {
+    @apply mb-8;
+  }
+
+  .section-header h2 {
+    @apply m-0 text-2xl;
+  }
 }

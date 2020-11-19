@@ -1,0 +1,98 @@
+{
+  "site": {
+    "title": "Pablo Maceda | Back-end developer in London, UK",
+    "description": "I'm Pablo Maceda, back-end developer offering 5 years of experience, with a solid background as PHP developer and a broad technical skill set",
+    "author": "Pablo Maceda",
+    "siteUrl": "https://pablo.dev"
+  },
+  "author": {
+    "jobTitle": "Software Engineer",
+    "email": "contact@pablo.dev",
+    "social": ["https://github.com/meuxx", "https://www.linkedin.com/in/pablo-maceda"],
+    "country": "UK",
+    "city": "London",
+    "organizationName": "Sainsbury's",
+    "organizationUrl": "https://www.sainsburys.co.uk/"
+  },
+  "skills": [
+    {
+      "name": "JavaScript",
+      "skills": [
+        "ES6",
+        "NodeJS",
+        "TypeScript",
+        "Jest",
+        "Express",
+        "React",
+        "Styled Components",
+        "React Testing Library",
+        "Gatsby",
+        "Next.js",
+        "Webpack",
+        "Babel",
+        "jQuery"
+      ]
+    },
+    {
+      "name": "PHP",
+      "skills": ["Symfony", "Laravel", "Composer", "PDO", "Doctrine", "PSR"]
+    },
+    {
+      "name": "Web",
+      "skills": ["CSS3", "HTML5", "Semantic", "Responsive", "SPA", "REST/GraphQL APIs", "TestCafe", "Cypress.io"]
+    },
+    {
+      "name": "Data Storage",
+      "skills": ["MySQL", "Redis", "Memcache", "Cassandra", "MongoDB", "DynamoDB"]
+    },
+    {
+      "name": "Tools",
+      "skills": [
+        "Git",
+        "SVN",
+        "CircleCI",
+        "GitHub Actions",
+        "Docker",
+        "Vagrant",
+        "Nginx",
+        "Apache",
+        "HAProxy",
+        "Ansible",
+        "Kibana",
+        "NewRelic",
+        "Pingdom",
+        "Grafana",
+        "Prometheus",
+        "Zabbix",
+        "Contentful"
+      ]
+    },
+    {
+      "name": "Cloud",
+      "skills": ["Amazon Web Services (Lambda, API Gateway, S3, CloudFront, Route 53)", "DigitalOcean", "Netlify"]
+    },
+    {
+      "name": "Scripting",
+      "skills": ["Python", "Bash", "Batch"]
+    },
+    {
+      "name": "Other",
+      "skills": ["Agile", "Scrum", "Kanban", "PCI Compliance", "SEO"]
+    }
+  ],
+  "experience": [
+    {
+      "company": "Sainsbury's",
+      "location": "London, UK",
+      "period": "August 2019 – Present",
+      "description": ""
+    },
+    {
+      "company": "Kooomo",
+      "location": "Dublin, Ireland",
+      "period": "April 2014 – August 2019",
+      "description": "Developed and supported the ecommerce platform with special focus on performance improvements and the implementation of new technologies to satisfy the business needs. Creation of several internal tools to monitor the platform and to ensure the healthy status of it. Coordinated the delivery of new technology implementations alongside the Sysadmin team. During my last year in Kooomo I had the opportunity to lead the SRE team as well as a project to modernise the monolithic platform codebase."
+    }
+  ],
+  "hobbies": ["Coding", "Keyboards and Synths", "Music production", "Games", "Electronics", "Movies / TV Shows"]
+}
