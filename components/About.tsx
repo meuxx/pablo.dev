@@ -9,15 +9,17 @@ const About: React.FC = () => {
       <header className="section-header">
         <h2>About me</h2>
       </header>
+
       <p>
-        I&apos;m <strong>Pablo Maceda</strong>, back-end developer offering 6+ years of experience, with a solid
-        background as PHP developer currently working with NodeJS and React. I have a broad technical skill set, passion
-        for clean code and good performance.
+        I&apos;m <strong>Pablo Maceda</strong>, Software Engineer offering 6 years of experience, with a solid
+        background as PHP developer currently focused on NodeJS and React. I have a broad technical skill set, passion
+        for clean code and good performance.With excellent problem-solving skills and the ability to work effectively as
+        part of a team or on my own.
       </p>
       <p>As a self-taught developer, I always enjoy learning new tools and technologies.</p>
 
       <a
-        className="inline-block transition-color border-2 border-accentfgbold text-accentfgbold rounded-md font-bold px-12 py-2 hover:bg-accentbg" // Button
+        className="inline-block transition-color border-2 border-accentfgbold text-accentfgbold rounded-md font-bold px-12 py-2 hover:bg-accentbg hover:text-fgbold" // Button
         href="https://cv.pablo.dev"
         rel="noopener noreferrer"
         target="_blank"

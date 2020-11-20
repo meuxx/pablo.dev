@@ -1,7 +1,7 @@
 {
   "site": {
     "title": "Pablo Maceda | Back-end developer in London, UK",
-    "description": "I'm Pablo Maceda, back-end developer offering 5 years of experience, with a solid background as PHP developer and a broad technical skill set",
+    "description": "I'm Pablo Maceda, Software Engineer offering 6 years of experience, with a solid background as back-end developer and a broad technical skill set",
     "author": "Pablo Maceda",
     "siteUrl": "https://pablo.dev"
   },
@@ -24,60 +24,65 @@
         "Jest",
         "Express",
         "React",
+        "Redux",
         "Styled Components",
         "React Testing Library",
         "Gatsby",
         "Next.js",
         "Webpack",
         "Babel",
-        "jQuery"
+        "ESLint"
       ]
     },
     {
-      "name": "PHP",
-      "skills": ["Symfony", "Laravel", "Composer", "PDO", "Doctrine", "PSR"]
-    },
-    {
       "name": "Web",
-      "skills": ["CSS3", "HTML5", "Semantic", "Responsive", "SPA", "REST/GraphQL APIs", "TestCafe", "Cypress.io"]
+      "skills": [
+        "PHP",
+        "CSS3",
+        "HTML5",
+        "Semantic",
+        "Responsive",
+        "SPA",
+        "REST/GraphQL APIs",
+        "E2E frameworks (TestCafe, Cypress.io, Playwright)"
+      ]
     },
     {
       "name": "Data Storage",
       "skills": ["MySQL", "Redis", "Memcache", "Cassandra", "MongoDB", "DynamoDB"]
     },
     {
-      "name": "Tools",
+      "name": "Server / Cloud",
       "skills": [
-        "Git",
-        "SVN",
-        "CircleCI",
-        "GitHub Actions",
-        "Docker",
-        "Vagrant",
         "Nginx",
-        "Apache",
         "HAProxy",
-        "Ansible",
         "Kibana",
-        "NewRelic",
-        "Pingdom",
         "Grafana",
         "Prometheus",
-        "Zabbix",
-        "Contentful"
+        "AWS (Lambda, API Gateway, S3, CloudFront, Route 53)",
+        "DigitalOcean",
+        "Netlify",
+        "Vercel"
       ]
     },
     {
-      "name": "Cloud",
-      "skills": ["Amazon Web Services (Lambda, API Gateway, S3, CloudFront, Route 53)", "DigitalOcean", "Netlify"]
-    },
-    {
-      "name": "Scripting",
-      "skills": ["Python", "Bash", "Batch"]
+      "name": "Tools",
+      "skills": [
+        "Git",
+        "Terraform",
+        "CI platforms (CircleCI, GitHub Actions)",
+        "Docker",
+        "Vagrant",
+        "NewRelic",
+        "Pingdom",
+        "Datadog",
+        "Contentful",
+        "Figma"
+      ]
     },
     {
       "name": "Other",
-      "skills": ["Agile", "Scrum", "Kanban", "PCI Compliance", "SEO"]
+      "skills": ["Agile", "CI/CD", "Scrum", "Kanban", "PCI Compliance", "SEO"]
     }
   ],
   "experience": [
@@ -85,14 +90,14 @@
       "company": "Sainsbury's",
       "location": "London, UK",
       "period": "August 2019 – Present",
-      "description": ""
+      "description": "Working in a multidisciplinary team across multiple products. I had the opportunity to expand my area of comfort and develop my cloud and front-end skills while working in a fully CI/CD environment, delivering code multiple times a day.\nI focused my work on shaping the back-end architecture, making products simple, increasing automation and reducing costs.\nDuring my time at Sainsbury's I have learned the benefits and tradeoffs of a serverless architecture and refined my testing skills including E2E testing.\n"
     },
     {
       "company": "Kooomo",
       "location": "Dublin, Ireland",
       "period": "April 2014 – August 2019",
-      "description": "Developed and supported the ecommerce platform with special focus on performance improvements and the implementation of new technologies to satisfy the business needs. Creation of several internal tools to monitor the platform and to ensure the healthy status of it. Coordinated the delivery of new technology implementations alongside the Sysadmin team. During my last year in Kooomo I had the opportunity to lead the SRE team as well as a project to modernise the monolithic platform codebase."
+      "description": "Developed and supported the ecommerce platform with special focus on performance improvements and the implementation of new technologies to satisfy the business needs. Creation of several internal tools to monitor the platform and to ensure the healthy status of it. Coordinated the delivery of new technology implementations alongside the Sysadmin team. \nStarting as an intern, I had the opportunity to quickly grow professionally.\nDuring my last period on Kooomo I led the SRE team as well as a project to modernise the monolithic platform codebase using Laravel.\n"
     }
   ],
-  "hobbies": ["Coding", "Keyboards and Synths", "Music production", "Games", "Electronics", "Movies / TV Shows"]
+  "hobbies": ["Software Development", "Music production", "Keyboards & Synths", "Electronics", "Games", "Travel", "Movies & TV Shows"]
 }
