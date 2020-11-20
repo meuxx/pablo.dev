@@ -13,8 +13,8 @@ const About: React.FC = () => {
       <p>
         I&apos;m <strong>Pablo Maceda</strong>, Software Engineer offering 6 years of experience, with a solid
         background as PHP developer currently focused on NodeJS and React. I have a broad technical skill set, passion
-        for clean code and good performance.With excellent problem-solving skills and the ability to work effectively as
-        part of a team or on my own.
+        for clean code and good performance. With excellent problem-solving skills and the ability to work effectively
+        as part of a team or on my own.
       </p>
       <p>As a self-taught developer, I always enjoy learning new tools and technologies.</p>
 

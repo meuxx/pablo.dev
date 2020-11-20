@@ -37,11 +37,12 @@ const Sidebar: React.FC = () => {
           <strong className="text-fgbold">{data.site.author}</strong>
           <br />{' '}
           <a
-            className="sidebar-link"
+            className="sidebar-link active:text-fgbold"
             href={`mailto:${data.author.email}`}
             rel="noopener noreferrer"
             target="_blank"
             aria-label="Contact email"
+            tabIndex={0}
             title="Contact email"
             onClick={handleMailGoal}
           >

@@ -99,5 +99,14 @@
       "description": "Developed and supported the ecommerce platform with special focus on performance improvements and the implementation of new technologies to satisfy the business needs. Creation of several internal tools to monitor the platform and to ensure the healthy status of it. Coordinated the delivery of new technology implementations alongside the Sysadmin team. \nStarting as an intern, I had the opportunity to quickly grow professionally.\nDuring my last period on Kooomo I led the SRE team as well as a project to modernise the monolithic platform codebase using Laravel.\n"
     }
   ],
-  "hobbies": ["Software Development", "Music production", "Keyboards & Synths", "Electronics", "Games", "Travel", "Movies & TV Shows"]
+  "hobbies": [
+    "Software Development",
+    "Music production",
+    "Keyboards & Synths",
+    "Electronics",
+    "Games",
+    "Travel",
+    "Movies & TV Shows",
+    "Symmetry 😅"
+  ]
 }

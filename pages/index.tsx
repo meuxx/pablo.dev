@@ -8,8 +8,9 @@ import Skills from '../components/Skills'
 import Experience from '../components/Experience'
 
 import data from '../content/data.json'
+import Hobbies from '../components/Hobbies'
 
-const { site, skills, experience } = data
+const { site, skills, experience, hobbies } = data
 const siteUrl = 'https://next.pablo.page'
 
 declare module 'react' {
@@ -54,6 +55,7 @@ const Home: React.FC = () => (
       <About />
       <Skills data={skills} />
       <Experience data={experience} />
+      <Hobbies data={hobbies} />
     </div>
   </Layout>
 )
