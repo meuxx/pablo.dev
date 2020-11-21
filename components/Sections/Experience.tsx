@@ -16,13 +16,10 @@ const Experience: React.FC<{ data: ExperienceInterface[] }> = ({ data }) => (
           {company} ({location}) <strong className="block text-accentfgbold text-lg sm:float-right">{period}</strong>
         </h3>
         <div className="leading-7">
-          {description
-            .trim()
-            .split('\n')
-            .map((item, key) => (
-              // eslint-disable-next-line react/no-array-index-key
-              <p key={`experience-${period}-paragraph-${key}`}>{item}</p>
-            ))}
+          {description.split('\n').map((item, key) => (
+            // eslint-disable-next-line react/no-array-index-key
+            <p key={`experience-${period}-paragraph-${key}`}>{item}</p>
+          ))}
         </div>
       </div>
     ))}

@@ -1,7 +1,7 @@
 {
   "site": {
     "title": "Pablo Maceda | Software Engineer in London, UK",
-    "description": "I'm Pablo Maceda, Software Engineer offering 6 years of experience, with a solid background as back-end developer and a broad technical skill set",
+    "description": "I'm Pablo Maceda, Software Engineer with a solid background as back-end developer and a broad technical skill set",
     "author": "Pablo Maceda",
     "siteUrl": "https://pablo.dev"
   },
@@ -17,72 +17,27 @@
   "skills": [
     {
       "name": "JavaScript",
-      "skills": [
-        "ES6",
-        "NodeJS",
-        "TypeScript",
-        "Jest",
-        "Express",
-        "React",
-        "Redux",
-        "Styled Components",
-        "React Testing Library",
-        "Gatsby",
-        "Next.js",
-        "Webpack",
-        "Babel",
-        "ESLint"
-      ]
+      "skills": "ES6, TypeScript, NodeJS, Express, Apollo GraphQL, React, Redux, Styled Components, Jest, React Testing Library, Gatsby, Next.js, Webpack, Babel, ESLint"
     },
     {
       "name": "Web",
-      "skills": [
-        "PHP",
-        "CSS3",
-        "HTML5",
-        "Semantic",
-        "Responsive",
-        "SPA",
-        "REST/GraphQL APIs",
-        "E2E frameworks (TestCafe, Cypress.io, Playwright)"
-      ]
-    },
-    {
-      "name": "Data Storage",
-      "skills": ["MySQL", "Redis", "Memcache", "Cassandra", "MongoDB", "DynamoDB"]
+      "skills": "PHP, CSS3, HTML5, Semantic, Responsive, SPAs, REST/GraphQL APIs, E2E frameworks (TestCafe, Cypress.io, Playwright)"
     },
     {
       "name": "Server / Cloud",
-      "skills": [
-        "Nginx",
-        "HAProxy",
-        "Kibana",
-        "Grafana",
-        "Prometheus",
-        "AWS (Lambda, API Gateway, S3, CloudFront, Route 53)",
-        "DigitalOcean",
-        "Netlify",
-        "Vercel"
-      ]
+      "skills": "Nginx, HAProxy, Kibana, Grafana, Prometheus, AWS (Lambda, API Gateway, S3, CloudFront, Route 53), DigitalOcean, Netlify, Vercel"
     },
     {
       "name": "Tools",
-      "skills": [
-        "Git",
-        "Terraform",
-        "CI platforms (CircleCI, GitHub Actions)",
-        "Docker",
-        "Vagrant",
-        "NewRelic",
-        "Pingdom",
-        "Datadog",
-        "Contentful",
-        "Figma"
-      ]
+      "skills": "Git, IaC, Terraform, CI platforms (CircleCI, GitHub Actions), Docker, Vagrant, NewRelic, Pingdom, Datadog, Contentful, Figma"
+    },
+    {
+      "name": "Data Storage",
+      "skills": "MySQL, Redis, Memcache, Cassandra, MongoDB, DynamoDB"
     },
     {
       "name": "Other",
-      "skills": ["Agile", "CI/CD", "Scrum", "Kanban", "PCI Compliance", "SEO"]
+      "skills": "Agile, CI/CD, Scrum, Kanban, PCI Compliance, SEO"
     }
   ],
   "experience": [
@@ -90,13 +45,13 @@
       "company": "Sainsbury's",
       "location": "London, UK",
       "period": "August 2019 – Present",
-      "description": "Working in a multidisciplinary team across multiple products. I had the opportunity to expand my area of comfort and develop my cloud and front-end skills while working in a fully CI/CD environment, delivering code multiple times a day.\nI focused my work on shaping the back-end architecture, making products simple, increasing automation, and reducing costs.\nDuring my time at Sainsbury's, I have learned the benefits and trade-offs of a fully serverless architecture and refined my testing skills including E2E testing.\n"
+      "description": "Working in a multidisciplinary team across multiple products. I had the opportunity to use cutting-edge technologies and expand my area of comfort by developing my cloud and front-end skills. \nI focused my time on shaping the back-end architecture, making products simple, increasing automation, and reducing costs while working in a fully CI/CD environment and deploying code multiple times a day.\nDuring my time at Sainsbury's, I have learned the benefits and trade-offs of a fully serverless architecture and refined my testing skills including E2E testing."
     },
     {
       "company": "Kooomo",
       "location": "Dublin, Ireland",
       "period": "April 2014 – August 2019",
-      "description": "Developed and supported the ecommerce platform with special focus on performance improvements and the implementation of new technologies to satisfy the business needs. Creation of several internal tools to monitor the platform and to ensure the healthy status of it. Coordinated the delivery of new technology implementations alongside the Sysadmin team. \nStarting as an intern, I had the opportunity to quickly grow professionally.\nDuring my last period on Kooomo I led the SRE team as well as a project to modernise the monolithic platform codebase using Laravel.\n"
+      "description": "Developed and supported the PHP ecommerce platform with special focus on performance improvements and the implementation of new technologies to satisfy the business needs. Creation of several internal tools to monitor the platform and to ensure the healthy status of it. Coordinated the delivery of new technology implementations alongside the Sysadmin team. \nStarting as an intern, I had the opportunity to quickly grow professionally.\nDuring my last period on Kooomo, I led the SRE team as well as a project to refactor and modernise the monolithic platform codebase using Laravel."
     }
   ],
   "hobbies": [
