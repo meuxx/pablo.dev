@@ -32,7 +32,7 @@ const SidebarIcons: React.FC = () => {
     <footer className="relative flex-shrink-0 w-full inset-auto">
       <ul className="space-x-2">
         {icons.map((icon) => (
-          <li className="inline-block">
+          <li className="inline-block" key={`sidebar-icons-${icon.label}`}>
             <a
               className="transition-colors text-2xl px-1 text-accentfglight relative hover:text-fgbold focus:text-fgbold"
               href={icon.href}

@@ -5,6 +5,7 @@ import Avatar from './Avatar'
 import SidebarIcons from './SidebarIcons'
 
 import data from '../content/data.json'
+import SidebarLink from './SidebarLink'
 
 const getShortUrl = (url: string): string => {
   try {
@@ -36,33 +37,23 @@ const Sidebar: React.FC = () => {
         <h1 className="font-bold text-xl lg:text-3xl leading-8 lg:leading-loose">
           <strong className="text-fgbold">{data.site.author}</strong>
           <br />{' '}
-          <a
-            className="sidebar-link active:text-fgbold"
+          <SidebarLink
+            label={data.author.email}
             href={`mailto:${data.author.email}`}
-            rel="noopener noreferrer"
-            target="_blank"
-            aria-label="Contact email"
-            tabIndex={0}
             title="Contact email"
             onClick={handleMailGoal}
-          >
-            {data.author.email}
-          </a>
+          />
         </h1>
       </header>
 
       <section className="flex-grow font-bold text-2xl w-full">
         {data.author.jobTitle} at{' '}
-        <a
-          className="inline-block sidebar-link"
+        <SidebarLink
+          label={shortUrl}
           href={data.author.organizationUrl}
-          rel="noopener noreferrer"
-          target="_blank"
           title={data.author.organizationName}
           onClick={handleOrganizationGoal}
-        >
-          {shortUrl}
-        </a>
+        />
         <br />
         {`${data.author.city}, ${data.author.country}`}
       </section>

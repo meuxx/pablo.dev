@@ -1,4 +1,5 @@
 import React from 'react'
+import Section from '../Section'
 
 interface SkillSetInterface {
   name: string
@@ -6,19 +7,16 @@ interface SkillSetInterface {
 }
 
 const Skills: React.FC<{ data: SkillSetInterface[] }> = ({ data }) => (
-  <article className="section">
-    <header className="section-header">
-      <h2>Skills</h2>
-    </header>
-    <section className="grid grid-cols-2 gap-4 sm:grid-cols-none">
+  <Section title="Skills">
+    <div className="grid grid-cols-2 gap-4 sm:grid-cols-none">
       {data.map((skillSet) => (
         <div key={`skillSet-${skillSet.name}`}>
           <h3 className="m-0 text-lg text-accentfgbold font-bold">{skillSet.name}</h3>
           <span>{skillSet.skills.join(', ')}</span>
         </div>
       ))}
-    </section>
-  </article>
+    </div>
+  </Section>
 )
 
 export default Skills

@@ -26,25 +26,11 @@
     @apply font-sans leading-6 bg-bg text-fg;
   }
 
-  .sidebar-link {
-    @apply transition-colors border-b border-dotted hover:text-fgbold hover:border-transparent focus:text-fgbold focus:border-transparent;
+  p {
+    @apply text-fglight mb-6 last:mb-0;
   }
 
-  .section > section p {
-    @apply text-fglight mb-6;
-  }
-
-  .section > section p strong,
-  .section-header h1,
-  .section-header h2 {
+  strong {
     @apply text-fgbold font-bold;
-  }
-
-  .section-header {
-    @apply mb-8;
-  }
-
-  .section-header h2 {
-    @apply m-0 text-3xl;
   }
 }

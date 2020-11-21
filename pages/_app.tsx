@@ -13,7 +13,7 @@ config.autoAddCss = false
 library.add(faGithub, faLinkedin, faEnvelope)
 
 const { site } = data
-const siteUrl = 'https://next.pablo.page'
+const siteUrl = 'https://next.pablo.page' // TODO
 
 const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => (
   <Layout>

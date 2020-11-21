@@ -1,12 +1,12 @@
 import React, { HTMLAttributes } from 'react'
 import { NextSeo } from 'next-seo'
 
-import About from '../components/About'
-import Skills from '../components/Skills'
-import Experience from '../components/Experience'
+import About from '../components/Sections/About'
+import Skills from '../components/Sections/Skills'
+import Experience from '../components/Sections/Experience'
+import Hobbies from '../components/Sections/Hobbies'
 
 import data from '../content/data.json'
-import Hobbies from '../components/Hobbies'
 
 const { site, skills, experience, hobbies } = data
 

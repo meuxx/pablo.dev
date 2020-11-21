@@ -1,4 +1,5 @@
 import React from 'react'
+import Section from '../Section'
 
 interface ExperienceInterface {
   company: string
@@ -8,28 +9,28 @@ interface ExperienceInterface {
 }
 
 const Experience: React.FC<{ data: ExperienceInterface[] }> = ({ data }) => (
-  <article className="section">
-    <header className="section-header">
-      <h2>Experience</h2>
-    </header>
+  <Section title="Experience">
     {data.map(({ company, location, period, description }) => (
-      <section key={`experience-${period}`}>
+      <div key={`experience-${period}`}>
         <h3 className="text-xl text-fgbold font-bold py-4 md:text-lg">
           {company} ({location}){' '}
           <strong className="block text-accentfgbold text-lg float-right md:text-base sm:float-none">{period}</strong>
         </h3>
         <div className="leading-7">
-          {description.split('\n').map((item, key) => (
-            // eslint-disable-next-line react/no-array-index-key
-            <p key={`experience-${period}-paragraph-${key}`}>
-              {item}
-              <br />
-            </p>
-          ))}
+          {description
+            .trim()
+            .split('\n')
+            .map((item, key) => (
+              // eslint-disable-next-line react/no-array-index-key
+              <p key={`experience-${period}-paragraph-${key}`}>
+                {item}
+                <br />
+              </p>
+            ))}
         </div>
-      </section>
+      </div>
     ))}
-  </article>
+  </Section>
 )
 
 export default Experience
