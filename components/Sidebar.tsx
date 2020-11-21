@@ -26,15 +26,14 @@ const Sidebar: React.FC = () => {
   return (
     <nav
       className={
-        'space-y-10 flex flex-col items-end justify-between bg-texture bg-accentbg bg-repeat text-accentfg h-full px-8 py-16 ' +
-        'fixed top-0 left-0 w-80 text-right ' +
-        'lg:relative lg:min-h-screen lg:w-full lg:text-center'
+        'space-y-10 flex flex-col bg-texture bg-accentbg text-accentfg px-8 py-16 text-center min-h-screen ' +
+        'lg:fixed lg:top-0 lg:left-0 lg:w-80 lg:text-right'
       }
     >
       <header className="w-full leading-10">
         <Avatar />
 
-        <h1 className="font-bold text-xl lg:text-3xl leading-8 lg:leading-loose">
+        <h1 className="font-bold text-3xl leading-loose lg:text-xl lg:leading-8">
           <strong className="block text-fgbold">{data.site.author}</strong>{' '}
           <SidebarLink
             label={data.author.email}
