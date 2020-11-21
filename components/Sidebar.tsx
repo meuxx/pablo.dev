@@ -2,7 +2,7 @@ import React, { useMemo } from 'react'
 import useFathomGoal from './hooks/useFathomGoal'
 
 import Avatar from './Avatar'
-import SidebarFooter from './SidebarFooter'
+import SidebarIcons from './SidebarIcons'
 
 import data from '../content/data.json'
 
@@ -23,14 +23,14 @@ const Sidebar: React.FC = () => {
   const shortUrl = useMemo(() => getShortUrl(data.author.organizationUrl), [])
 
   return (
-    <div
+    <nav
       className={
         'space-y-10 flex flex-col items-end justify-between bg-texture bg-accentbg bg-repeat text-accentfg h-full px-8 py-16 ' +
         'fixed top-0 left-0 w-80 text-right ' +
         'lg:relative lg:min-h-screen lg:w-full lg:text-center'
       }
     >
-      <div className="w-full leading-10">
+      <header className="w-full leading-10">
         <Avatar />
 
         <h1 className="font-bold text-xl lg:text-3xl leading-8 lg:leading-loose">
@@ -49,9 +49,9 @@ const Sidebar: React.FC = () => {
             {data.author.email}
           </a>
         </h1>
-      </div>
+      </header>
 
-      <h2 className="flex-grow font-bold text-2xl w-full">
+      <section className="flex-grow font-bold text-2xl w-full">
         {data.author.jobTitle} at{' '}
         <a
           className="inline-block sidebar-link"
@@ -65,10 +65,10 @@ const Sidebar: React.FC = () => {
         </a>
         <br />
         {`${data.author.city}, ${data.author.country}`}
-      </h2>
+      </section>
 
-      <SidebarFooter />
-    </div>
+      <SidebarIcons />
+    </nav>
   )
 }
 

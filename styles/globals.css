@@ -27,22 +27,14 @@
   }
 
   .sidebar-link {
-    @apply transition-colors border-b border-dotted hover:text-fgbold hover:border-transparent;
+    @apply transition-colors border-b border-dotted hover:text-fgbold hover:border-transparent focus:text-fgbold focus:border-transparent;
   }
 
-  .sidebar-icon {
-    @apply inline-block;
+  .section > section p {
+    @apply text-fglight mb-6;
   }
 
-  .sidebar-icon-link {
-    @apply transition-colors text-2xl text-accentfglight relative hover:text-fgbold;
-  }
-
-  .section > p {
-    @apply text-fglight mb-8;
-  }
-
-  .section > p strong,
+  .section > section p strong,
   .section-header h1,
   .section-header h2 {
     @apply text-fgbold font-bold;

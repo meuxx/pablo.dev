@@ -1,18 +1,18 @@
 import React from 'react'
 
 const Hobbies: React.FC<{ data: string[] }> = ({ data }) => (
-  <section className="section">
+  <article className="section">
     <header className="section-header">
       <h2>Hobbies</h2>
     </header>
-    <div className="grid grid-cols-4 gap-3 sm:grid-cols-2">
+    <section className="grid grid-cols-4 gap-3 sm:grid-cols-2">
       {data.map((hobby) => (
-        <div key={`hobby-${hobby}`}>
-          <h3 className="m-0 font-bold">{hobby}</h3>
-        </div>
+        <h3 key={`hobby-${hobby}`} className="m-0 font-bold">
+          {hobby}
+        </h3>
       ))}
-    </div>
-  </section>
+    </section>
+  </article>
 )
 
 export default Hobbies
