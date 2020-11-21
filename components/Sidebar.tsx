@@ -35,8 +35,7 @@ const Sidebar: React.FC = () => {
         <Avatar />
 
         <h1 className="font-bold text-xl lg:text-3xl leading-8 lg:leading-loose">
-          <strong className="text-fgbold">{data.site.author}</strong>
-          <br />{' '}
+          <strong className="block text-fgbold">{data.site.author}</strong>{' '}
           <SidebarLink
             label={data.author.email}
             href={`mailto:${data.author.email}`}
@@ -47,15 +46,14 @@ const Sidebar: React.FC = () => {
       </header>
 
       <section className="flex-grow font-bold text-2xl w-full">
-        {data.author.jobTitle} at{' '}
+        <span className="block">{data.author.jobTitle} at</span>
         <SidebarLink
           label={shortUrl}
           href={data.author.organizationUrl}
           title={data.author.organizationName}
           onClick={handleOrganizationGoal}
         />
-        <br />
-        {`${data.author.city}, ${data.author.country}`}
+        <span className="block">{`${data.author.city}, ${data.author.country}`}</span>
       </section>
 
       <SidebarIcons />

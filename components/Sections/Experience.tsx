@@ -9,12 +9,12 @@ interface ExperienceInterface {
 }
 
 const Experience: React.FC<{ data: ExperienceInterface[] }> = ({ data }) => (
-  <Section title="Experience">
+  <Section title="Experience" className="space-y-8">
     {data.map(({ company, location, period, description }) => (
       <div key={`experience-${period}`}>
-        <h3 className="text-xl text-fgbold font-bold py-4 md:text-lg">
+        <h3 className="text-xl text-fgbold font-bold py-4">
           {company} ({location}){' '}
-          <strong className="block text-accentfgbold text-lg float-right md:text-base sm:float-none">{period}</strong>
+          <strong className="block text-accentfgbold text-lg float-right sm:float-none">{period}</strong>
         </h3>
         <div className="leading-7">
           {description
@@ -22,10 +22,7 @@ const Experience: React.FC<{ data: ExperienceInterface[] }> = ({ data }) => (
             .split('\n')
             .map((item, key) => (
               // eslint-disable-next-line react/no-array-index-key
-              <p key={`experience-${period}-paragraph-${key}`}>
-                {item}
-                <br />
-              </p>
+              <p key={`experience-${period}-paragraph-${key}`}>{item}</p>
             ))}
         </div>
       </div>
