@@ -53,6 +53,6 @@
   }
 
   .section-header h2 {
-    @apply m-0 text-2xl;
+    @apply m-0 text-3xl;
   }
 }
