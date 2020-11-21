@@ -3,7 +3,7 @@ import Section from '../Section'
 
 interface SkillSetInterface {
   name: string
-  skills: string[]
+  skills: string
 }
 
 const Skills: React.FC<{ data: SkillSetInterface[] }> = ({ data }) => (
