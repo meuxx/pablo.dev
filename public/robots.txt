@@ -1,0 +1,5 @@
+Sitemap: https://pablo.dev/sitemap.xml
+Host: https://pablo.dev
+
+User-agent: *
+Allow: /
