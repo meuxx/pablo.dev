@@ -1,3 +1,5 @@
+import React from 'react'
+import ReactDOM from 'react-dom'
 import { AppProps } from 'next/app'
 import { DefaultSeo } from 'next-seo'
 
@@ -14,6 +16,10 @@ library.add(faGithub, faLinkedin, faEnvelope)
 
 const { site } = data
 const siteUrl = 'https://next.pablo.page' // TODO
+
+if (process.env.NODE_ENV !== 'production' && typeof window !== 'undefined') {
+  import('@axe-core/react').then(({ default: axe }) => axe(React, ReactDOM, 1000))
+}
 
 const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => (
   <Layout>

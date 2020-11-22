@@ -6,8 +6,8 @@ class MyDocument extends Document {
       <Html>
         <Head>
           <link rel="shortcut icon" href="/favicon.png" />
-          <link rel="preload" href="/fonts/SourceSansPro-Regular-latin.woff2" as="font" type="font/woff2" />
-          <link rel="preload" href="/fonts/SourceSansPro-Bold-latin.woff2" as="font" type="font/woff2" />
+          {/* <link rel="preload" href="/fonts/SourceSansPro-Regular-latin.woff2" as="font" type="font/woff2" /> */}
+          {/* <link rel="preload" href="/fonts/SourceSansPro-Bold-latin.woff2" as="font" type="font/woff2" /> */}
           <link rel="preload" href="/img/background.png" as="image" />
           <script
             key="gatsby-plugin-fathom"
