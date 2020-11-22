@@ -10,7 +10,7 @@ module.exports = {
       },
     },
     backgroundImage: () => ({
-      texture: "url('/img/background.png')",
+      texture: "url('../images/background.png')",
     }),
     colors: {
       bg: '#0E0E0E',

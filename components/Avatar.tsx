@@ -1,19 +1,20 @@
 import React from 'react'
-import Image from 'next/image'
+import Img from 'react-optimized-image'
+
+import avatarImage from '../images/avatar.jpg'
 
 const Avatar: React.FC = () => (
-  <div className="inline-block w-32 h-32 mb-8">
-    <Image
-      className="rounded-full"
-      src="/img/avatar.jpg"
-      alt="Picture of the author"
-      loading="lazy"
-      layout="fixed"
-      width={128}
-      height={128}
-      // priority
-    />
-  </div>
+  <Img
+    className="inline-block w-32 h-32 mb-8 rounded-full"
+    src={avatarImage}
+    densities={[1, 2]}
+    sizes={[128, 256]}
+    webp
+    alt="Picture of the author"
+    loading="lazy"
+    width={128}
+    height={128}
+  />
 )
 
 export default Avatar

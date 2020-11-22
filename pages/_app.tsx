@@ -9,6 +9,7 @@ import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
 
 import '../styles/globals.css'
 import data from '../content/data.json'
+import openGraphImage from '../images/open_graph.jpg'
 import Layout from '../components/Layout'
 
 config.autoAddCss = false
@@ -33,7 +34,7 @@ const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => (
         description: site.description,
         images: [
           {
-            url: `${siteUrl}/img/open_graph.jpg`,
+            url: openGraphImage.src,
           },
         ],
       }}
@@ -43,7 +44,7 @@ const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => (
       additionalMetaTags={[
         {
           property: 'image',
-          content: `${siteUrl}/img/open_graph.jpg`,
+          content: openGraphImage.src,
         },
       ]}
       dangerouslySetAllPagesToNoFollow // TODO

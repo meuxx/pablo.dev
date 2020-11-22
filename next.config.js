@@ -1,6 +1,7 @@
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
+const withOptimizedImages = require('next-optimized-images')
 
-module.exports = {
+module.exports = withOptimizedImages({
   target: 'serverless',
   webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
     if (process.env.ANALYZE) {
@@ -14,4 +15,4 @@ module.exports = {
     }
     return config
   },
-}
+})
