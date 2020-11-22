@@ -3,7 +3,7 @@ import Document, { Html, Head, Main, NextScript } from 'next/document'
 class MyDocument extends Document {
   render(): JSX.Element {
     return (
-      <Html>
+      <Html lang="en-GB">
         <Head>
           <link rel="shortcut icon" href="/favicon.png" />
           {/* <link rel="preload" href="/fonts/SourceSansPro-Regular-latin.woff2" as="font" type="font/woff2" /> */}

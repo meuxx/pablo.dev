@@ -1,10 +1,7 @@
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 
 module.exports = {
-  i18n: {
-    locales: ['en-GB'],
-    defaultLocale: 'en-GB',
-  },
+  target: 'serverless',
   webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
     if (process.env.ANALYZE) {
       config.plugins.push(
