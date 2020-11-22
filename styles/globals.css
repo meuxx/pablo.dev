@@ -45,7 +45,7 @@
   }
 
   p {
-    @apply text-fglight mb-6 last:mb-0;
+    @apply text-fglight mb-4 last:mb-0;
   }
 
   strong {

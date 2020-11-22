@@ -1,11 +1,11 @@
 import React from 'react'
 import { FontAwesomeIcon, FontAwesomeIconProps } from '@fortawesome/react-fontawesome'
-import useFathomGoal from './hooks/useFathomGoal'
+import useFathomGoal, { GOAL } from './hooks/useFathomGoal'
 
 const SidebarIcons: React.FC = () => {
-  const handleMailGoal = useFathomGoal('NMFGPZ35')
-  const handleGitHubGoal = useFathomGoal('TUDCIJWD')
-  const handleLinkedInGoal = useFathomGoal('VN1YOMWA')
+  const handleMailGoal = useFathomGoal(GOAL.MAIL)
+  const handleGitHubGoal = useFathomGoal(GOAL.GITHUB)
+  const handleLinkedInGoal = useFathomGoal(GOAL.LINKEDIN)
 
   const icons: { href: string; label: string; onClick: () => void; icon: FontAwesomeIconProps['icon'] }[] = [
     {

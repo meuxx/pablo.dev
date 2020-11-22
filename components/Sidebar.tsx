@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react'
-import useFathomGoal from './hooks/useFathomGoal'
+import useFathomGoal, { GOAL } from './hooks/useFathomGoal'
 
 import Avatar from './Avatar'
 import SidebarIcons from './SidebarIcons'
@@ -18,8 +18,8 @@ const getShortUrl = (url: string): string => {
 }
 
 const Sidebar: React.FC = () => {
-  const handleMailGoal = useFathomGoal('NMFGPZ35')
-  const handleOrganizationGoal = useFathomGoal('HBXPURPT')
+  const handleMailGoal = useFathomGoal(GOAL.MAIL)
+  const handleOrganizationGoal = useFathomGoal(GOAL.ORG)
 
   const shortUrl = useMemo(() => getShortUrl(data.author.organizationUrl), [])
 

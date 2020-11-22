@@ -1,9 +1,9 @@
 import React from 'react'
-import useFathomGoal from '../hooks/useFathomGoal'
+import useFathomGoal, { GOAL } from '../hooks/useFathomGoal'
 import Section from '../Section'
 
 const About: React.FC = () => {
-  const handleGoal = useFathomGoal('V5LKNTOU')
+  const handleGoal = useFathomGoal(GOAL.CV)
 
   return (
     <Section title="About me">
@@ -14,7 +14,7 @@ const About: React.FC = () => {
       </p>
 
       <a
-        className={`inline-block transition-color border-2 border-accentfgbold text-accentfgbold rounded-md font-bold px-12 py-2
+        className={`inline-block transition-color border-2 border-accentfgbold text-accentfgbold rounded-md font-bold px-12 py-2 mt-4
           hover:text-fgbold hover:border-fgbold focus:text-fgbold focus:border-fgbold`}
         href="https://cv.pablo.dev"
         rel="noopener noreferrer"
