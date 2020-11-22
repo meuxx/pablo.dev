@@ -16,6 +16,8 @@ enum GOAL {
   GITHUB = 'TUDCIJWD',
   LINKEDIN = 'VN1YOMWA',
   ORG = 'HBXPURPT',
+  SOURCE = '0SG34XMR',
+  FATHOM = 'UP0QQDXI',
 }
 
 export { GOAL }

@@ -7,7 +7,7 @@ const SidebarLink: React.FC<{
   onClick: () => void
 }> = ({ label, href, title, onClick }) => (
   <a
-    className={`transition-colors border-b border-dotted
+    className={`transition-colors border-b border-dotted 
     hover:text-fgbold hover:border-transparent focus:text-fgbold focus:border-transparent`}
     href={href}
     rel="noopener noreferrer"

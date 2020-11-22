@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Section: React.FC<{ title: string; className?: string }> = ({ title, className, children }) => (
-  <article className="section">
+  <article>
     <header className="mb-8">
       <h2 className="text-fgbold font-bold m-0 text-3xl">{title}</h2>
     </header>

@@ -20,7 +20,7 @@ declare module 'react' {
 const Home: React.FC = () => (
   <>
     <NextSeo title={site.title} description={site.description} canonical={site.siteUrl} />
-    <div className="space-y-16 my-12 mx-8 md:my-16 md:mx-16">
+    <div className="space-y-16">
       <About />
       <Skills data={skills} />
       <Experience data={experience} />
