@@ -2,3 +2,8 @@
   command   = "yarn build-netlify"
   functions = "out_functions"
   publish   = "out_publish"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Content-Security-Policy-Report-Only = "default-src 'none'; form-action 'none'; frame-ancestors 'none'; report-uri https://pablodev.report-uri.com/r/d/csp/wizard"
