@@ -16,7 +16,6 @@ config.autoAddCss = false
 library.add(faGithub, faLinkedin, faEnvelope)
 
 const { site } = data
-const siteUrl = 'https://next.pablo.page' // TODO
 
 if (process.env.NODE_ENV !== 'production' && typeof window !== 'undefined') {
   import('@axe-core/react').then(({ default: axe }) => axe(React, ReactDOM, 1000))
@@ -28,7 +27,7 @@ const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => (
       openGraph={{
         type: 'website',
         locale: 'en_GB',
-        url: siteUrl,
+        url: site.siteUrl,
         title: site.title,
         site_name: site.author,
         description: site.description,
@@ -47,8 +46,6 @@ const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => (
           content: openGraphImage.src,
         },
       ]}
-      dangerouslySetAllPagesToNoFollow // TODO
-      dangerouslySetAllPagesToNoIndex // TODO
     />
     {/* eslint-disable-next-line react/jsx-props-no-spreading */}
     <Component {...pageProps} />
