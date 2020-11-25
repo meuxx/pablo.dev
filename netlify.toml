@@ -6,4 +6,4 @@
 [[headers]]
   for = "/*"
   [headers.values]
-    Content-Security-Policy = "default-src 'self' data: haddock.pablo.dev; report-uri https://pablodev.report-uri.com/r/d/csp/enforce"
+    Content-Security-Policy = "default-src 'self' data: haddock.pablo.page; report-uri https://pablodev.report-uri.com/r/d/csp/enforce"
