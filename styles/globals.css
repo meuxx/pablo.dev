@@ -8,6 +8,7 @@
 @layer base {
   body {
     @apply font-sans leading-6 bg-bg text-fg;
+    font-size-adjust: 0.5;
   }
 
   p {
