@@ -3,6 +3,18 @@
   functions = "out_functions"
   publish   = "out_publish"
 
+[[redirects]]
+  from = "https://www.pablo.dev/*"
+  to = "https://pablo.dev/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://pablo-dev.netlify.app/*"
+  to = " https://pablo.dev/:splat"
+  status = 301
+  force = true
+
 [[headers]]
   for = "/*"
   [headers.values]
