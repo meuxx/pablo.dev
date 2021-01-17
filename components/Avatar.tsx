@@ -10,7 +10,8 @@ const Avatar: React.FC = () => (
     densities={[1, 2]}
     sizes={[128, 256]}
     webp
-    alt="Picture of the author"
+    alt=""
+    aria-label="Picture of the author"
     loading="lazy"
     width={128}
     height={128}
