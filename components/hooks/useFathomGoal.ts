@@ -1,12 +1,9 @@
 import { useCallback } from 'react'
+import { trackGoal } from 'fathom-client'
 
 const useFathomGoal = (code: string, cents = 0): (() => void) => {
   return useCallback(() => {
-    if (window.fathom === undefined) {
-      return
-    }
-
-    window.fathom.trackGoal(code, cents)
+    trackGoal(code, cents)
   }, [code, cents])
 }
 

@@ -6,9 +6,6 @@ class MyDocument extends Document {
       <Html lang="en-GB">
         <Head>
           <link rel="shortcut icon" href="/favicon.png" />
-          {process.env.NODE_ENV === 'production' && (
-            <script src="https://haddock.pablo.dev/script.js" included-domains="pablo.dev" site="XMVFXWIR" defer />
-          )}
         </Head>
         <body>
           <Main />
