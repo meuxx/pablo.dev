@@ -38,6 +38,10 @@ module.exports = {
     'import/extensions': ['error', 'ignorePackages', { js: 'never', jsx: 'never', ts: 'never', tsx: 'never' }],
     'import/no-extraneous-dependencies': ['error', { devDependencies: ['**/*.{spec,test}.[jt]s?(x)', './*.js'] }],
     'arrow-body-style': [0],
+    'jsx-a11y/anchor-is-valid': [
+      'error',
+      { components: ['Link'], specialLink: ['hrefLeft', 'hrefRight'], aspects: ['invalidHref', 'preferButton'] },
+    ],
   },
   overrides: [
     {

@@ -1,4 +1,5 @@
 @import '~@fortawesome/fontawesome-svg-core/styles.css';
+@import '~react-notion-x/src/styles.css';
 @import '../fonts/SourceSansPro.css';
 
 @tailwind base;
@@ -17,5 +18,9 @@
 
   strong {
     @apply text-fgbold font-bold;
+  }
+
+  .notion-viewport {
+    visibility: hidden;
   }
 }
