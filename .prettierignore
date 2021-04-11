@@ -1,7 +1,5 @@
 .next
 out
-out_functions
-out_publish
 package.json
 package-lock.json
 public
