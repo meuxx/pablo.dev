@@ -12,8 +12,7 @@ module.exports = {
     'plugin:jsx-a11y/recommended',
     'airbnb',
     'plugin:@typescript-eslint/recommended',
-    'prettier/@typescript-eslint',
-    'plugin:prettier/recommended',
+    'prettier',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -38,6 +37,7 @@ module.exports = {
     'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.ts', '.tsx'] }],
     'import/extensions': ['error', 'ignorePackages', { js: 'never', jsx: 'never', ts: 'never', tsx: 'never' }],
     'import/no-extraneous-dependencies': ['error', { devDependencies: ['**/*.{spec,test}.[jt]s?(x)', './*.js'] }],
+    'arrow-body-style': [0],
   },
   overrides: [
     {
