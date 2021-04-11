@@ -17,11 +17,11 @@
   "skills": [
     {
       "name": "JavaScript",
-      "skills": "ES6, TypeScript, NodeJS, Express, Apollo GraphQL, React, Redux, Styled Components, Jest, React Testing Library, Gatsby, Next.js, Webpack, Babel, ESLint"
+      "skills": "TypeScript, NodeJS, Express, Apollo GraphQL, React, Styled Components, Jest, React Testing Library, Gatsby, Next.js, Webpack, Babel, ESLint"
     },
     {
       "name": "Web",
-      "skills": "PHP, CSS3, HTML5, Semantic, Responsive, SPAs, REST/GraphQL APIs, E2E frameworks (TestCafe, Cypress.io, Playwright)"
+      "skills": "PHP, ES6+, CSS3, HTML5, Semantic, Responsive, SPAs, REST/GraphQL APIs, E2E testing frameworks"
     },
     {
       "name": "Server / Cloud",
@@ -29,15 +29,15 @@
     },
     {
       "name": "Tools",
-      "skills": "Git, IaC, Terraform, CI platforms (CircleCI, GitHub Actions), Docker, Vagrant, NewRelic, Pingdom, Datadog, Contentful, Figma"
+      "skills": "Git, Terraform, CI platforms (CircleCI, GitHub Actions), Docker, Vagrant, NewRelic, Pingdom, Datadog, Figma"
     },
     {
       "name": "Data Storage",
-      "skills": "MySQL, Redis, Memcache, Cassandra, MongoDB, DynamoDB"
+      "skills": "MySQL, DynamoDB, Redis, Memcache, MongoDB"
     },
     {
       "name": "Other",
-      "skills": "Agile, CI/CD, Scrum, Kanban, PCI Compliance, SEO"
+      "skills": "Agile, CI/CD, Scrum, PCI Compliance, SEO"
     }
   ],
   "experience": [
@@ -45,13 +45,13 @@
       "company": "Sainsbury's",
       "location": "London, UK",
       "period": "August 2019 – Present",
-      "description": "Working in a multidisciplinary team across multiple products. I had the opportunity to explore cutting-edge technologies and expand my area of comfort by developing my cloud and front-end skills. \nI focused my time on shaping the back-end architecture, making products simple, increasing automation, and reducing costs while working in a fully CI/CD environment and deploying code multiple times a day.\nDuring my time at Sainsbury's, I have learned the benefits and trade-offs of a fully serverless architecture and refined my testing skills including E2E testing."
+      "description": "Working in a multidisciplinary team across multiple products (internal and customer-facing). I had the opportunity to explore cutting-edge technologies and expand my area of comfort by developing my cloud and front-end skills.\nI focused my time on shaping the back-end architecture, making products simple, increasing automation, and reducing costs while working in a fully CI/CD environment and deploying code multiple times a day.\nDuring my time at Sainsbury's, I have learned the benefits and trade-offs of using a fully serverless architecture and refined my testing skills including E2E testing."
     },
     {
       "company": "Kooomo",
       "location": "Dublin, Ireland",
       "period": "April 2014 – August 2019",
-      "description": "Developed and supported the PHP ecommerce platform with special focus on performance improvements and the implementation of new technologies to satisfy the business needs. Creation of several internal tools to monitor the platform and to ensure the healthy status of it. Coordinated the delivery of new technology implementations alongside the Sysadmin team. \nStarting as an intern, I had the opportunity to quickly grow professionally.\nDuring my last period at Kooomo, I led the SRE team as well as a project to refactor and modernise the monolithic platform codebase using Laravel."
+      "description": "Developed and supported the PHP ecommerce platform with extra care on performance improvements and the implementation of new technologies to satisfy the business needs. Creation of several internal tools to monitor the platform and to ensure the healthy status of it. Coordinated the delivery of new technology implementations alongside the Sysadmin team.\nStarting as an intern, I had the opportunity to quickly grow professionally.\nDuring my last period at Kooomo, I led the SRE team as well as a project to refactor and modernise the monolithic platform codebase using Laravel."
     }
   ],
   "hobbies": [
