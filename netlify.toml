@@ -20,7 +20,7 @@
 [[headers]]
   for = "/*"
   [headers.values]
-    Content-Security-Policy = "default-src 'self' 'unsafe-inline' www.notion.so haddock.pablo.dev; connect-src 'self'; font-src 'self'; img-src 'self' data: haddock.pablo.dev; script-src-elem 'self' haddock.pablo.dev; style-src-elem 'self'; report-uri https://pablodev.report-uri.com/r/d/csp/enforce; report-to https://pablodev.report-uri.com/r/d/csp/enforce"
+    Content-Security-Policy = "default-src 'self' 'unsafe-inline' www.notion.so haddock.pablo.dev; connect-src 'self'; font-src 'self'; img-src 'self' data: haddock.pablo.dev www.notion.so; script-src-elem 'self' haddock.pablo.dev; style-src-elem 'self'; report-uri https://pablodev.report-uri.com/r/d/csp/enforce; report-to https://pablodev.report-uri.com/r/d/csp/enforce"
 #    Content-Security-Policy-Report-Only = "default-src 'none'; form-action 'none'; frame-ancestors 'none'; report-uri https://pablodev.report-uri.com/r/d/csp/wizard"
     Report-To = "{\"group\":\"default\",\"max_age\":31536000,\"endpoints\":[{\"url\":\"https://pablodev.report-uri.com/a/d/g\"}],\"include_subdomains\":true}"
     NEL = "{\"report_to\":\"default\",\"max_age\":31536000,\"include_subdomains\":true}"
