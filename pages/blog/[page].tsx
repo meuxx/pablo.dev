@@ -54,7 +54,7 @@ const BlogEntryPage: React.FC<Props> = ({ pageContents, pageTitle }) => {
       <NextSeo title={`${pageTitle} | ${site.title}`} noindex />
 
       <Section title={pageTitle}>
-        {/* notion-viewport */}
+        {/* notion-viewport notion-callout-text notion-asset-wrapper-image */}
         <NotionRenderer recordMap={pageContents} fullPage={false} previewImages={false} darkMode className="p-0 m-0" />
       </Section>
     </>

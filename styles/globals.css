@@ -23,4 +23,12 @@
   .notion-viewport {
     visibility: hidden;
   }
+
+  .notion-callout-text {
+    display: unset;
+  }
+
+  .notion-asset-wrapper-image > div {
+    height: auto !important;
+  }
 }

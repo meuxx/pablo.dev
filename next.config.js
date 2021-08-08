@@ -6,6 +6,9 @@ module.exports = withOptimizedImages({
   images: {
     disableStaticImages: true,
   },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
     if (process.env.ANALYZE) {
       config.plugins.push(
