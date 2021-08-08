@@ -3,8 +3,8 @@ const withOptimizedImages = require('next-optimized-images')
 
 module.exports = withOptimizedImages({
   target: 'serverless',
-  future: {
-    webpack5: true,
+  images: {
+    disableStaticImages: true,
   },
   webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
     if (process.env.ANALYZE) {
