@@ -18,14 +18,14 @@ const Footer: React.FC<{ className: string }> = ({ className = '' }) => {
       </span>
       <span className="font-bold"> · </span>
       <span>
-        <>This site uses privacy-focused </>
+        This site uses privacy-focused{' '}
         <SidebarLink
           href="https://usefathom.com/ref/JOQ4WL"
           label="Fathom Analytics"
           title="Fathom Analytics"
           onClick={handleFathomGoal}
-        />
-        <> and does not track or collect personal data</>
+        />{' '}
+        and does not track or collect personal data
       </span>
     </footer>
   )

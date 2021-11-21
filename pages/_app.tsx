@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { ReactElement, useEffect } from 'react'
 import ReactDOM from 'react-dom'
 import { AppProps } from 'next/app'
 import { DefaultSeo } from 'next-seo'
@@ -23,7 +23,7 @@ if (process.env.NODE_ENV !== 'production' && typeof window !== 'undefined') {
   import('@axe-core/react').then(({ default: axe }) => axe(React, ReactDOM, 1000))
 }
 
-const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => {
+const MyApp = ({ Component, pageProps }: AppProps): ReactElement => {
   const router = useRouter()
 
   useEffect(() => {
