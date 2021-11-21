@@ -29,7 +29,7 @@ const MyApp = ({ Component, pageProps }: AppProps): ReactElement => {
   useEffect(() => {
     Fathom.load('XMVFXWIR', {
       includedDomains: ['pablo.dev'],
-      url: 'https://haddock.pablo.dev/script.js',
+      url: 'https://cheeky-rewarding.pablo.dev/script.js',
     })
 
     function onRouteChangeComplete() {
