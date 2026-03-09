@@ -1,36 +1,29 @@
-import React from 'react'
-import { FontAwesomeIcon, FontAwesomeIconProps } from '@fortawesome/react-fontawesome'
-import useFathomGoal, { GOAL } from './hooks/useFathomGoal'
+import type { FC } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import type { IconProp } from '@fortawesome/fontawesome-svg-core'
 
-const SidebarIcons: React.FC = () => {
-  const handleMailGoal = useFathomGoal(GOAL.MAIL)
-  const handleGitHubGoal = useFathomGoal(GOAL.GITHUB)
-  const handleLinkedInGoal = useFathomGoal(GOAL.LINKEDIN)
-
-  const icons: { href: string; label: string; onClick: () => void; icon: FontAwesomeIconProps['icon'] }[] = [
+const SidebarIcons: FC = () => {
+  const icons: { href: string; label: string; icon: IconProp }[] = [
     {
       href: 'mailto:contact@pablo.dev',
       label: 'Email',
-      onClick: handleMailGoal,
       icon: ['far', 'envelope'],
     },
     {
       href: 'https://github.com/meuxx',
       label: 'GitHub',
-      onClick: handleGitHubGoal,
       icon: ['fab', 'github'],
     },
     {
       href: 'https://www.linkedin.com/in/pablo-maceda',
       label: 'LinkedIn',
-      onClick: handleLinkedInGoal,
       icon: ['fab', 'linkedin'],
     },
   ]
 
   return (
-    <footer className="relative flex-shrink-0 w-full inset-auto">
-      <ul className="space-x-2">
+    <div className="relative inset-auto w-full flex-shrink-0" aria-label="Social links">
+      <ul className="flex justify-center gap-1 lg:justify-end">
         {icons.map((icon) => (
           <li className="inline-block" key={`sidebar-icons-${icon.label}`}>
             <a
@@ -40,15 +33,14 @@ const SidebarIcons: React.FC = () => {
               target="_blank"
               aria-label={icon.label}
               title={icon.label}
-              onClick={icon.onClick}
             >
-              <FontAwesomeIcon icon={[icon.icon[0], icon.icon[1]]} />
+              <FontAwesomeIcon icon={icon.icon} />
               <span className="hidden">{icon.label}</span>
             </a>
           </li>
         ))}
       </ul>
-    </footer>
+    </div>
   )
 }
 

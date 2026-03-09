@@ -5,5 +5,3 @@
 Live site [pablo.dev](https://pablo.dev).
 
 The project was created with [Next.js](https://nextjs.org/).
-
-This site uses privacy-focused [Fathom Analytics](https://usefathom.com/ref/JOQ4WL) and does not track or collect personal data.

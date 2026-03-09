@@ -1,9 +1,14 @@
-import React from 'react'
+import type { PropsWithChildren } from 'react'
 
-const Section: React.FC<{ title: string; className?: string }> = ({ title, className, children }) => (
+type SectionProps = PropsWithChildren<{
+  title: string
+  className?: string
+}>
+
+const Section = ({ title, className, children }: SectionProps) => (
   <article>
     <header className="mb-8">
-      <h2 className="text-fgbold font-bold m-0 text-3xl">{title}</h2>
+      <h2 className="m-0 text-3xl font-bold text-fgbold">{title}</h2>
     </header>
     <section className={className}>{children}</section>
   </article>

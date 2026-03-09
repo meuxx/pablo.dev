@@ -1,10 +1,7 @@
-import React from 'react'
-import useFathomGoal, { GOAL } from '../hooks/useFathomGoal'
+import type { FC } from 'react'
 import Section from '../Section'
 
-const About: React.FC = () => {
-  const handleGoal = useFathomGoal(GOAL.CV)
-
+const About: FC = () => {
   return (
     <Section title="About me">
       <p>
@@ -21,7 +18,6 @@ const About: React.FC = () => {
         target="_blank"
         aria-label="Curriculum Vitae"
         title="Curriculum Vitae"
-        onClick={handleGoal}
       >
         View CV
       </a>

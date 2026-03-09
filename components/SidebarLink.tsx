@@ -1,10 +1,10 @@
-import React from 'react'
+import type { FC } from 'react'
 
-const SidebarLink: React.FC<{
+const SidebarLink: FC<{
   label: string
   href: string
   title: string
-  onClick: () => void
+  onClick?: () => void
 }> = ({ label, href, title, onClick }) => (
   <a
     className={`transition-colors border-b border-dotted 

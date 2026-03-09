@@ -1,21 +1,19 @@
-import React from 'react'
+import type { FC } from 'react'
 import Link from 'next/link'
 import Section from './Section'
 
-const Experience: React.FC<{ title: string; message: string }> = ({ title, message }) => (
+const Error: FC<{ title: string; message: string }> = ({ title, message }) => (
   <Section title={title}>
     <p>{message}</p>
 
-    <Link href="/">
-      <a
-        href="/"
-        className={`text-accentfgbold font-bold text-xl transition-colors border-b border-dotted
+    <Link
+      href="/"
+      className={`text-accentfgbold font-bold text-xl transition-colors border-b border-dotted
         hover:text-fgbold hover:border-transparent focus:text-fgbold focus:border-transparent`}
-      >
-        Home
-      </a>
+    >
+      Home
     </Link>
   </Section>
 )
 
-export default Experience
+export default Error

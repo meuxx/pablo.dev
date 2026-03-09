@@ -1,14 +1,12 @@
-import React from 'react'
+import type { FC, PropsWithChildren } from 'react'
 import Sidebar from './Sidebar'
 import Footer from './Footer'
 
-const Layout: React.FC = ({ children }) => (
+const Layout: FC<PropsWithChildren> = ({ children }) => (
   <>
     <Sidebar />
-    <div className="lg:pl-80 xl:pr-80 py-12 md:py-16 flex flex-col min-h-screen space-y-16">
-      <div className="mx-8 md:mx-16 flex-1" role="main">
-        {children}
-      </div>
+    <div className="flex min-h-screen flex-col gap-16 py-12 md:py-16 lg:pl-80 xl:pr-80">
+      <div className="mx-8 md:mx-16 flex-1">{children}</div>
       <Footer className="mx-8 md:mx-16" />
     </div>
   </>

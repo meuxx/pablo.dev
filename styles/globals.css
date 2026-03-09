@@ -1,23 +1,47 @@
-@import '~@fortawesome/fontawesome-svg-core/styles.css';
-@import '~react-notion-x/src/styles.css';
+@import '@fortawesome/fontawesome-svg-core/styles.css';
+@import 'react-notion-x/src/styles.css';
 @import '../fonts/SourceSansPro.css';
+@import 'tailwindcss';
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@theme {
+  --font-sans:
+    'Source Sans Pro', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+    'Noto Color Emoji';
+  --color-bg: #0e0e0e;
+  --color-fg: #a2a2a2;
+  --color-fgbold: #ffffff;
+  --color-fglight: #b2b2b2;
+  --color-accentbg: #034577;
+  --color-accentfg: rgba(255, 255, 255, 0.5);
+  --color-accentfgbold: #0b7dd5;
+  --color-accentfglight: rgba(255, 255, 255, 0.4);
+}
+
+@utility bg-texture {
+  background-image: url('../images/background.png');
+}
 
 @layer base {
   body {
-    @apply font-sans leading-6 bg-bg text-fg;
+    font-family: var(--font-sans);
+    line-height: calc(var(--spacing) * 6);
+    background-color: var(--color-bg);
+    color: var(--color-fg);
     font-size-adjust: 0.5;
   }
 
   p {
-    @apply text-fglight mb-4 last:mb-0;
+    color: var(--color-fglight);
+    margin-bottom: calc(var(--spacing) * 4);
+  }
+
+  p:last-child {
+    margin-bottom: 0;
   }
 
   strong {
-    @apply text-fgbold font-bold;
+    color: var(--color-fgbold);
+    font-weight: var(--font-weight-bold);
   }
 
   .notion-viewport {
@@ -31,4 +55,9 @@
   .notion-asset-wrapper-image > div {
     height: auto !important;
   }
+}
+
+.notion-content-wrapper .notion-page {
+  margin: 0;
+  padding: 0;
 }

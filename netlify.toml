@@ -1,9 +1,6 @@
 [build]
-  command   = "yarn build"
+  command   = "pnpm build"
   publish   = "out"
-
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
 
 [[redirects]]
   from = "https://www.pablo.dev/*"
@@ -13,21 +10,15 @@
 
 [[redirects]]
   from = "https://pablo-dev.netlify.app/*"
-  to = " https://pablo.dev/:splat"
+  to = "https://pablo.dev/:splat"
   status = 301
   force = true
 
 [[headers]]
   for = "/*"
-  [headers.values]
-    Content-Security-Policy = "default-src 'self' 'unsafe-inline' www.notion.so cheeky-rewarding.pablo.dev; connect-src 'self' cheeky-rewarding.pablo.dev; font-src 'self'; img-src 'self' data: cheeky-rewarding.pablo.dev www.notion.so; script-src-elem 'self' cheeky-rewarding.pablo.dev; style-src-elem 'self'; report-uri https://pablodev.report-uri.com/r/d/csp/enforce; report-to https://pablodev.report-uri.com/r/d/csp/enforce"
-#    Content-Security-Policy-Report-Only = "default-src 'none'; form-action 'none'; frame-ancestors 'none'; report-uri https://pablodev.report-uri.com/r/d/csp/wizard"
-    Report-To = "{\"group\":\"default\",\"max_age\":31536000,\"endpoints\":[{\"url\":\"https://pablodev.report-uri.com/a/d/g\"}],\"include_subdomains\":true}"
-    NEL = "{\"report_to\":\"default\",\"max_age\":31536000,\"include_subdomains\":true}"
-    Expect-CT = "max-age=0, report-uri=\"https://pablodev.report-uri.com/r/d/ct/reportOnly\""
+[headers.values]
+    Content-Security-Policy = "default-src 'self' www.notion.so; connect-src 'self'; font-src 'self'; img-src 'self' data: www.notion.so; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'"
     Referrer-Policy = "no-referrer"
-    Feature-Policy = "accelerometer 'none'; camera 'none'; geolocation 'none'; gyroscope 'none'; magnetometer 'none'; microphone 'none'; midi 'none'; payment 'none'; speaker 'none'; usb 'none'"
     Permissions-Policy = "accelerometer=(),  camera=(), geolocation=(), gyroscope=(), magnetometer=(),  microphone=(), midi=(), payment=(), speaker=(), usb=()"
     X-Content-Type-Options = "nosniff"
     X-Frame-Options = "DENY"
-

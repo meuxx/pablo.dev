@@ -1,12 +1,12 @@
-import React from 'react'
+import type { FC } from 'react'
 import Section from '../Section'
 
-interface SkillSetInterface {
+interface SkillSet {
   name: string
   skills: string
 }
 
-const Skills: React.FC<{ data: SkillSetInterface[] }> = ({ data }) => (
+const Skills: FC<{ data: SkillSet[] }> = ({ data }) => (
   <Section title="Skills" className="grid gap-4 sm:grid-cols-2">
     {data.map((skillSet) => (
       <div key={`skillSet-${skillSet.name}`}>

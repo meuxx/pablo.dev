@@ -1,7 +1,10 @@
-import { NotionAPI } from 'notion-client'
+import { cache } from 'react'
 import slugify from 'slugify'
 
+import { getTitleValue, notion } from './notion'
+
 const ROOT_PAGE_ID = '0aea4412918b4bc7925a24ce2b8b9b48'
+import type { NotionBlock } from './notion'
 
 export interface BlogEntryInfo {
   id: string
@@ -11,43 +14,61 @@ export interface BlogEntryInfo {
   summary?: string
 }
 
-const notion = new NotionAPI()
+const getSummaryFromBlock = cache(async (blockId: string): Promise<string | undefined> => {
+  const firstBlockContent = Object.values((await notion.getBlocks([blockId])).recordMap.block)[0] as
+    | NotionBlock
+    | undefined
 
-const getBlogEntries = async (getSummary = false): Promise<BlogEntryInfo[]> => {
+  return firstBlockContent ? (getTitleValue(firstBlockContent) ?? undefined) : undefined
+})
+
+const getBlogEntries = cache(async (getSummary = false): Promise<BlogEntryInfo[]> => {
   const pageContents = await notion.getPage(ROOT_PAGE_ID)
 
-  const blocks = Object.values(pageContents.block)
+  const blocks = Object.values(pageContents.block) as NotionBlock[]
 
   const pages: Promise<BlogEntryInfo>[] = blocks
     .filter((block) => {
-      if (block.value.type !== 'page') return false
-      if (block.value.id.replace(/-/g, '') === ROOT_PAGE_ID) return false
-      if (typeof block.value.properties.title[0][0] !== 'string') return false
+      const blockId = block.value?.id
+      const title = getTitleValue(block)
 
-      return true
+      if (block.value?.type !== 'page') return false
+      if (typeof blockId !== 'string' || blockId.replace(/-/g, '') === ROOT_PAGE_ID) return false
+      return title;
     })
     .map(async (block) => {
-      const title = block.value.properties.title[0][0]
-      const currentPageId = block.value.id.replace(/-/g, '')
+      const title = getTitleValue(block)
+      const currentBlockId = block.value?.id
+
+      if (!title || typeof currentBlockId !== 'string') {
+        throw new Error('Invalid Notion page data while building blog entries')
+      }
+
+      const currentPageId = currentBlockId.replace(/-/g, '')
 
       const result: BlogEntryInfo = {
-        id: block.value.id,
+        id: currentBlockId,
         pageId: currentPageId,
         title,
         url: `/blog/${slugify(title, { strict: true })}-${currentPageId}`,
       }
 
       if (getSummary) {
-        const firstBlock = block.value.content[0]
-        const firstBlockContent = Object.values((await notion.getBlocks([firstBlock])).recordMap.block)[0]
-        // eslint-disable-next-line prefer-destructuring
-        result.summary = firstBlockContent.value.properties.title[0][0]
+        const firstBlockId = block.value?.content?.[0]
+
+        if (typeof firstBlockId === 'string') {
+          const summary = await getSummaryFromBlock(firstBlockId)
+
+          if (summary) {
+            result.summary = summary
+          }
+        }
       }
 
       return result
     })
 
   return Promise.all(pages)
-}
+})
 
 export default getBlogEntries

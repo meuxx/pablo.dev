@@ -1,15 +1,15 @@
-import React from 'react'
+import type { FC } from 'react'
 import Section from '../Section'
 
-interface ExperienceInterface {
+interface ExperienceItem {
   company: string
   location: string
   period: string
   description: string
 }
 
-const Experience: React.FC<{ data: ExperienceInterface[] }> = ({ data }) => (
-  <Section title="Experience" className="space-y-8">
+const Experience: FC<{ data: ExperienceItem[] }> = ({ data }) => (
+  <Section title="Experience" className="flex flex-col gap-8">
     {data.map(({ company, location, period, description }) => (
       <div key={`experience-${period}`}>
         <h3 className="text-xl text-fgbold font-bold py-4">
@@ -17,8 +17,7 @@ const Experience: React.FC<{ data: ExperienceInterface[] }> = ({ data }) => (
         </h3>
         <div className="leading-7">
           {description.split('\n').map((item, key) => (
-            // eslint-disable-next-line react/no-array-index-key
-            <p key={`experience-${period}-paragraph-${key}`}>{item}</p>
+            <p key={`experience-${period}-paragraph-${String(key)}`}>{item}</p>
           ))}
         </div>
       </div>
