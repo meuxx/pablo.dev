@@ -1,12 +1,14 @@
 @import '@fortawesome/fontawesome-svg-core/styles.css';
 @import 'react-notion-x/src/styles.css';
-@import '../fonts/SourceSansPro.css';
 @import 'tailwindcss';
 
-@theme {
+@theme inline {
   --font-sans:
-    'Source Sans Pro', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
-    'Noto Color Emoji';
+    var(--font-source-sans-pro), ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+@theme {
   --color-bg: #0e0e0e;
   --color-fg: #a2a2a2;
   --color-fgbold: #ffffff;
