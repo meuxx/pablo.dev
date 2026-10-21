@@ -1,22 +1,11 @@
 import { NotionAPI } from 'notion-client'
-
-export interface NotionBlockValue {
-  id?: string
-  type?: string
-  content?: string[]
-  properties?: {
-    title?: [string, ...string[]][]
-  }
-}
-
-export interface NotionBlock {
-  value?: NotionBlockValue
-}
+import type { Block, Decoration } from 'notion-types'
 
 export const notion = new NotionAPI()
 
-export const getTitleValue = (block: NotionBlock): string | null => {
-  const title = block.value?.properties?.title?.[0]?.[0]
+export const getTitleValue = (block: Block): string | null => {
+  const { title } = (block.properties ?? {}) as { title?: Decoration[] }
+  const text = title?.[0]?.[0]
 
-  return typeof title === 'string' ? title : null
+  return typeof text === 'string' ? text : null
 }

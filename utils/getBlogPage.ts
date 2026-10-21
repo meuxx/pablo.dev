@@ -1,6 +1,6 @@
 import { cache } from 'react'
 
-import { getBlockTitle, parsePageId } from 'notion-utils'
+import { getBlockTitle, getBlockValue, parsePageId } from 'notion-utils'
 import type { ExtendedRecordMap } from 'notion-types'
 import { notion } from './notion'
 
@@ -18,8 +18,13 @@ export const getBlogPage = cache(async (pageSlug: string): Promise<BlogPageData 
   }
 
   const pageContents = await notion.getPage(pageId)
-  const firstBlock = Object.values(pageContents.block)[0]?.value
-  const pageTitle = getBlockTitle(firstBlock as Parameters<typeof getBlockTitle>[0], pageContents)
+  const firstBlock = getBlockValue(Object.values(pageContents.block)[0])
+
+  if (!firstBlock) {
+    return null
+  }
+
+  const pageTitle = getBlockTitle(firstBlock, pageContents)
 
   return {
     pageId,
