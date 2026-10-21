@@ -1,23 +1,30 @@
-import type { FC } from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import type { IconProp } from '@fortawesome/fontawesome-svg-core'
+'use client'
 
-const SidebarIcons: FC = () => {
-  const icons: { href: string; label: string; icon: IconProp }[] = [
+import type { FC, MouseEvent } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import type { IconDefinition } from '@fortawesome/fontawesome-svg-core'
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
+
+import { type EmailParts, getDecoyMailto, openEmail } from '../utils/email'
+
+const SidebarIcons: FC<{ email: EmailParts }> = ({ email }) => {
+  const icons: { href: string; label: string; icon: IconDefinition; onClick?: (e: MouseEvent) => void }[] = [
     {
-      href: 'mailto:contact@pablo.dev',
+      href: getDecoyMailto(email),
       label: 'Email',
-      icon: ['far', 'envelope'],
+      icon: faEnvelope,
+      onClick: openEmail(email),
     },
     {
       href: 'https://github.com/meuxx',
       label: 'GitHub',
-      icon: ['fab', 'github'],
+      icon: faGithub,
     },
     {
       href: 'https://www.linkedin.com/in/pablo-maceda',
       label: 'LinkedIn',
-      icon: ['fab', 'linkedin'],
+      icon: faLinkedin,
     },
   ]
 
@@ -30,9 +37,10 @@ const SidebarIcons: FC = () => {
               className="transition-colors text-2xl px-1 text-accentfglight relative hover:text-fgbold focus:text-fgbold"
               href={icon.href}
               rel="noopener noreferrer"
-              target="_blank"
+              target={icon.href.startsWith('mailto:') ? undefined : '_blank'}
               aria-label={icon.label}
               title={icon.label}
+              onClick={icon.onClick}
             >
               <FontAwesomeIcon icon={icon.icon} />
               <span className="hidden">{icon.label}</span>

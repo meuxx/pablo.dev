@@ -52,6 +52,10 @@
     display: unset;
   }
 
+  .e-addr > span:nth-child(2) {
+    display: none;
+  }
+
   .notion-asset-wrapper-image > div {
     height: auto !important;
   }

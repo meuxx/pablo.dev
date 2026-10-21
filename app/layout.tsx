@@ -1,9 +1,7 @@
 import type { Metadata } from 'next'
 import type { FC, PropsWithChildren } from 'react'
 
-import { library, config } from '@fortawesome/fontawesome-svg-core'
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
-import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
+import { config } from '@fortawesome/fontawesome-svg-core'
 
 import '../styles/globals.css'
 import AxeDev from '../components/AxeDev'
@@ -11,7 +9,6 @@ import Layout from '../components/Layout'
 import { siteMetadata } from '../utils/siteMetadata'
 
 config.autoAddCss = false
-library.add(faGithub, faLinkedin, faEnvelope)
 
 export const metadata: Metadata = siteMetadata
 

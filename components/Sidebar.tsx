@@ -2,9 +2,11 @@ import type { FC } from 'react'
 
 import Avatar from './Avatar'
 import SidebarIcons from './SidebarIcons'
+import ObfuscatedEmail from './ObfuscatedEmail'
 
 import data from '../content/data.json'
 import SidebarLink from './SidebarLink'
+import { splitEmail } from '../utils/email'
 
 const getShortUrl = (url: string): string => {
   try {
@@ -17,6 +19,7 @@ const getShortUrl = (url: string): string => {
 }
 
 const shortUrl = getShortUrl(data.author.organizationUrl)
+const email = splitEmail(data.author.email)
 
 const Sidebar: FC = () => {
   return (
@@ -31,8 +34,7 @@ const Sidebar: FC = () => {
         <Avatar />
 
         <h1 className="font-bold text-3xl leading-loose lg:text-xl lg:leading-8">
-          <strong className="block text-fgbold">{data.site.author}</strong>{' '}
-          <SidebarLink label={data.author.email} href={`mailto:${data.author.email}`} title="Contact email" />
+          <strong className="block text-fgbold">{data.site.author}</strong> <ObfuscatedEmail email={email} />
         </h1>
       </header>
 
@@ -42,7 +44,7 @@ const Sidebar: FC = () => {
         <span className="block">{`${data.author.city}, ${data.author.country}`}</span>
       </section>
 
-      <SidebarIcons />
+      <SidebarIcons email={email} />
     </nav>
   )
 }
