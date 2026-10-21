@@ -3,3 +3,5 @@ out
 package.json
 package-lock.json
 public
+pnpm-lock.yaml
+next-env.d.ts
