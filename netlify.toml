@@ -1,5 +1,5 @@
 [build]
-  command   = "pnpm build"
+  command   = "pnpm build:all"
   publish   = "out"
 
 [[redirects]]
@@ -13,6 +13,17 @@
   to = "https://pablo.dev/:splat"
   status = 301
   force = true
+
+[[redirects]]
+  from = "https://cv.pablo.dev/*"
+  to = "/cv.pdf"
+  status = 200
+  force = true
+
+[[headers]]
+  for = "/cv.pdf"
+[headers.values]
+    Content-Disposition = "inline; filename=\"Pablo Maceda CV.pdf\""
 
 [[headers]]
   for = "/*"

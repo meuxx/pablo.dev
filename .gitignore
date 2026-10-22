@@ -41,3 +41,6 @@ yarn-error.log*
 
 # next.js generated types
 next-env.d.ts
+
+# generated CV
+/public/cv.pdf
