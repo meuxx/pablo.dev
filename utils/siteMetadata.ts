@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 import data from '../content/data.json'
-import openGraphImage from '../images/open_graph.jpg'
+import { alt, contentType, size, url } from './openGraphImage'
 
 export const { site } = data
 
@@ -20,18 +20,9 @@ export const siteMetadata: Metadata = {
     title: site.title,
     siteName: site.author,
     description: site.description,
-    images: [
-      {
-        url: openGraphImage.src,
-      },
-    ],
   },
   twitter: {
     card: 'summary_large_image',
-    images: [openGraphImage.src],
-  },
-  other: {
-    image: openGraphImage.src,
   },
 }
 
@@ -39,6 +30,7 @@ export const buildPageMetadata = (metadata: Metadata = {}): Metadata => ({
   description: site.description,
   openGraph: {
     description: site.description,
+    images: { url, alt, type: contentType, ...size },
     ...metadata.openGraph,
   },
   ...metadata,
